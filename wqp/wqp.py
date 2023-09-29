@@ -6,9 +6,11 @@ import seaborn as sb
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn import metrics
-from xgboost import XGBClassifier
 from sklearn.svm import SVC
+from xgboost import XGBClassifier
 from sklearn.linear_model import LogisticRegression
+
+
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -65,3 +67,5 @@ for i in range(3):
     print('Validation Accuaracy : ', metrics.roc_auc_score(
         ytest, models[i].predict(xtest)))
     print()
+
+print(metrics.classification_report(ytest, models[1].predict(xtest)))
