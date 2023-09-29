@@ -31,8 +31,12 @@ for cole in df.columns:
 #plt.show()
 
 
-plt.bar(df['quality'], df['alcohol'])
-plt.xlabel('quality')
-plt.ylabel('alcohol')
-plt.show()
+#plt.bar(df['quality'], df['alcohol'])
+#plt.xlabel('quality')
+#plt.ylabel('alcohol')
+#plt.show()
+
+df = df.drop('total sulfur dioxide', axis=1)
+
+print(df.head)
 
