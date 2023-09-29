@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 df = pd.read_csv('winequality.csv')
 #print(df.head)
 #df.info()
-#de = df.describe().T
+de =  df.describe().T
 #print(de)
 #print(df.isnull().sum())
 
@@ -38,5 +38,16 @@ for cole in df.columns:
 
 df = df.drop('total sulfur dioxide', axis=1)
 
-print(df.head)
+
+df['best quality'] = [1 if x >5 else 0 for x in df.quality]
+df.replace({'white': 1, 'red': 0}, inplace=True)
+
+features = df.drop(['quality', 'best quality'], axis=1)
+target = df['best quality']
+
+xtrain, xtest, ytrain, ytest = train_test_split(
+    features, target, test_size=0.2, random_state=40)
+
+p = xtrain.shape, xtest.shape
+print(p)
 
