@@ -51,5 +51,17 @@ xtrain, xtest, ytrain, ytest = train_test_split(
 p = xtrain.shape, xtest.shape
 print(p)
 
+norm = MinMaxScaler()
+xtrain = norm.fit_transform(xtrain)
+xtest = norm.transform(xtest)
 
+models = [LogisticRegression() ,XGBClassifier(), SVC(kernel='rbf')]
 
+for i in range(3):
+    models[i].fit(xtrain, ytrain)
+
+    print(f'{models[i]} : ')
+    print('Training Accuracy : ', metrics.roc_auc_score(ytrain, models[i].predict(xtrain)))
+    print('Validation Accuaracy : ', metrics.roc_auc_score(
+        ytest, models[i].predict(xtest)))
+    print()
