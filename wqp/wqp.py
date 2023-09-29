@@ -24,8 +24,15 @@ for cole in df.columns:
     if df[cole].isnull().sum() > 0:
         df[cole] = df[cole].fillna(df[cole].mean())
 
-x = df.isnull().sum().sum()
-print(x)
+#x = df.isnull().sum().sum()
+#print(x)
 
-df.hist(bins=20, figsize=(10, 10))
+#df.hist(bins=20, figsize=(10, 10))
+#plt.show()
+
+
+plt.bar(df['quality'], df['alcohol'])
+plt.xlabel('quality')
+plt.ylabel('alcohol')
 plt.show()
+
