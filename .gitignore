@@ -4,4 +4,8 @@
 # Ada Library Information
 *.ali
 
+# Ignore virtual enviroment
 envwqp/
+
+# Ignore csv file
+winequality.csv
