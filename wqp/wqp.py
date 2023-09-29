@@ -51,3 +51,5 @@ xtrain, xtest, ytrain, ytest = train_test_split(
 p = xtrain.shape, xtest.shape
 print(p)
 
+
+
