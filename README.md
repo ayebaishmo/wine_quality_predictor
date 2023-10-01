@@ -70,6 +70,6 @@ You can explore and run the project by following these steps:
 The Wine Quality dataset contains features like acidity, pH, alcohol content, and more. The target variable is the quality of the wine, which is a numerical score. You can use this dataset to train and test various machine learning models. Find the wine quality data set on [kaggle](https://kaggle.com)
 
 ## Contributors
-- [Your Name](https://github.com/ayebaishmo)
+- [Ayebazibwe Ishmael](https://github.com/ayebaishmo)
 
 Feel free to contribute to this project or raise issues if you encounter any problems. Happy wine quality prediction! 🍷📊
